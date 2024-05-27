@@ -1,9 +1,10 @@
-x=int(input("Enter your age : "))
-input("Are youa student (yes or no):")
-
-if x==12 and 13<=x>=18:
-    print("you are eligible for the disscount")
-
-elif x>18:
-    print("you are not eligible for the discount")
-    
+def reverse_string(s):
+  if len(s) <= 1:
+    return s
+  first_char = s[0]
+  remaining_string = s[1:]
+  reversed_remaining = reverse_string(remaining_string)
+  return reversed_remaining + first_char
+input_string = "hello"
+reversed_string = reverse_string(input_string)
+print(f"Input: {input_string}, Reversed: {reversed_string}")
